@@ -37,10 +37,17 @@ export default () => {
 		localStorage.setItem('todos', JSON.stringify(updatedTodos));
 	};
 
+	const editTodo = (id: string, newTitle: string) => {
+		const updatedTodos = todos.map((todo) => (todo.id === id ? { ...todo, title: newTitle } : todo));
+		setTodos(updatedTodos);
+		localStorage.setItem('todos', JSON.stringify(updatedTodos));
+	};
+
 	return {
 		todos,
 		addTodo,
 		toggleTodo,
 		deleteTodo,
+		editTodo,
 	};
 };

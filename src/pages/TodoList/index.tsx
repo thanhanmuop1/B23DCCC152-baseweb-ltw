@@ -5,7 +5,7 @@ import TodoItem from './components/TodoItem';
 import styles from './index.less';
 
 const TodoList = () => {
-	const { todos, toggleTodo, deleteTodo } = useModel('todolist');
+	const { todos, toggleTodo, deleteTodo, editTodo } = useModel('todolist');
 
 	const completedCount = todos.filter((todo) => todo.completed).length;
 
@@ -21,7 +21,9 @@ const TodoList = () => {
 				className={styles.list}
 				itemLayout='horizontal'
 				dataSource={todos}
-				renderItem={(todo) => <TodoItem key={todo.id} todo={todo} onToggle={toggleTodo} onDelete={deleteTodo} />}
+				renderItem={(todo) => (
+					<TodoItem key={todo.id} todo={todo} onToggle={toggleTodo} onDelete={deleteTodo} onEdit={editTodo} />
+				)}
 				footer={
 					<div className={styles.footer}>
 						<Typography.Text type='secondary'>
