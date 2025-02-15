@@ -1,5 +1,5 @@
 import { Button, Form, Input } from 'antd';
-import { FC } from 'react';
+import type { FC } from 'react';
 
 interface RandomUserFormProps {
 	row?: RandomUser.Record;

@@ -74,7 +74,10 @@
 		hideInMenu: true,
 	},
 	{
-		path: '/',
+		path: '/todo-list',
+		name: 'TodoList',
+		component: '@/pages/TodoList',
+		icon: 'CalendarOutlined',
 	},
 	{
 		path: '/403',
