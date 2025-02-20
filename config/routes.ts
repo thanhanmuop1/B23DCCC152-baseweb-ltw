@@ -79,6 +79,41 @@
 		component: '@/pages/TodoList',
 		icon: 'CalendarOutlined',
 	},
+
+	{
+		path: '/random-number',
+		name: 'RandomNumber',
+		component: './RandomNumber',
+		icon: 'NumberOutlined',
+	},
+
+	{
+		path: '/learning-progress',
+		name: 'LearningProgress',
+		icon: 'BookOutlined',
+		routes: [
+			{
+				path: '/learning-progress',
+				redirect: '/learning-progress/subjects',
+			},
+			{
+				path: '/learning-progress/subjects',
+				name: 'Subjects',
+				component: './LearningProgress/Subjects',
+			},
+			{
+				path: '/learning-progress/progress',
+				name: 'Progress',
+				component: './LearningProgress',
+			},
+			{
+				path: '/learning-progress/statistics',
+				name: 'Statistics',
+				component: './LearningProgress/Statistics',
+			},
+		],
+	},
+
 	{
 		path: '/403',
 		component: './exception/403/403Page',

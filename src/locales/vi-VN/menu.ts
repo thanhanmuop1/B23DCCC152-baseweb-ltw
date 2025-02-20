@@ -8,4 +8,5 @@ export default {
 
 	'menu.DanhMuc': 'Danh mục',
 	'menu.DanhMuc.ChucVu': 'Chức vụ',
+	'menu.LearningProgress': 'Quản lý học tập',
 };
